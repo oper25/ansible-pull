@@ -1,12 +1,7 @@
 ---
 - hosts: localhost
+  name: Update timesyncd configuration
   become: true
 
-  tasks:
-  - debug: msg="Hellow world"	
-  #- name: Hellow world messages
-    #copy: 
-    #  src: ansible_test_app 
-    #  dest: /tmp/
-    #  owner: root
-    #  group: root
+  roles:
+    - synchronize_time

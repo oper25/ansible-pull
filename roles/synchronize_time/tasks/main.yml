@@ -1,0 +1,5 @@
+---
+# tasks file for synchronize_time
+- name: Copying timesyncd file configuration
+  copy: src=timesyncd.conf dest={{ destin_file }}  mode=644
+  notify: Restart timesyncd         #notify handlers about config changed

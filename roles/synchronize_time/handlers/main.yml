@@ -1,0 +1,8 @@
+---
+# handlers file for synchronize_time
+#This hadler will restart  systemd-timesyncd if timesyncd config will changed
+- name: Restart timesyncd
+  service:
+    name: systemd-timesyncd
+    state: restarted
+
