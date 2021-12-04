@@ -2,6 +2,8 @@
 - hosts: localhost
   name: Update timesyncd configuration
   become: true
-
-  roles:
-    - synchronize_time
+  
+  tasks:
+  - debug: msg="Hellow from Bitbucket private repo"
+  #roles:
+  #  - synchronize_time
